@@ -18,12 +18,16 @@ Ajustes:
 - --psm 7 ou 6 costuma funcionar bem
 - --min-digits / --max-digits conforme o padrão do número
 - use --no-digits-only se houver letras no número
+- --photo-timeout 60 define tempo máximo por foto (segundos). Use 0 para desativar.
+- --log /caminho/arquivo.txt para salvar o log em um local específico.
 - Se o código for sempre do mesmo tamanho (ex.: 6), ajuste `exact_digits` em `config.py`.
 
 Observação:
+- Um log de execução é salvo em `saida/` com nome `processamento-YYYYMMDD-HHMMSS.txt`.
 - Se a inscrição for vermelha em fundo branco, o sistema tenta localizar o texto vermelho em qualquer parte da imagem.
   Para desligar isso, ajuste `prefer_red_text=False` em `config.py`.
 - Imagens sem número identificado também são copiadas para a saída com prefixo `nao-identificado-`.
+- Imagens que estouram o tempo máximo são copiadas para a saída com prefixo `timeout-`.
 - Em imagens mais borradas, há uma segunda tentativa com pré-processamento mais agressivo
   (configure em `use_strong_preprocess_on_fail`).
 - OCR também tenta múltiplos modos de segmentação (PSM 7/8/6/13) quando falha no primeiro.

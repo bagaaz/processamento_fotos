@@ -34,3 +34,6 @@ class AppConfig:
 
     # Se não achar no recorte, tenta no frame todo também
     fallback_full_image: bool = True
+
+    # Tempo maximo por foto em segundos (0 desativa)
+    photo_timeout_sec: float = 60.0
