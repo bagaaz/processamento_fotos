@@ -1,11 +1,16 @@
-### Instalação
-pip install -r requirements.txt
+# Processamento de fotos por OCR
+
+Ferramenta Python que detecta o número de inscrição em fotos com Tesseract e grava os arquivos de saída com o número no nome.
+
+## Instalação
+
+Use Python 3.10 ou posterior, pip e o Tesseract. Instale as dependências Python com `python -m pip install -r requirements.txt`.
 
 Você precisa do Tesseract instalado no sistema:
 - Ubuntu/Debian: sudo apt-get install tesseract-ocr
 - Windows: instale o Tesseract e, se preciso, passe --tesseract-cmd
 
-### Uso
+## Uso
 python main.py --input ./fotos --output ./saida
 
 Para acelerar, use múltiplas threads:
